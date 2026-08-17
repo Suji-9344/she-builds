@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* Header */
+
+header {
+    height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3157d5;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #3157d5;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 550px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(135deg, #eef3ff, #ffffff);
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.tag {
+    color: #3157d5;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #3157d5;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.start-btn {
+    display: inline-block;
+    background: #3157d5;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #1f3fa8;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+/* Section */
+
+.calculator-section,
+.category-section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: #3157d5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin: 12px 0;
+}
+
+.section-title p {
+    color: #777;
+}
+
+
+/* Calculator */
+
+.calculator-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.input-card,
+.summary-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.input-card h2,
+.summary-card h2 {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #3157d5;
+}
+
+.add-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #3157d5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #1f3fa8;
+}
+
+
+/* Expense List */
+
+#expenseList {
+    margin-top: 25px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f7ff;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.delete-btn {
+    border: none;
+    background: #ff5757;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* Summary */
+
+.summary-box {
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-box small {
+    color: #666;
+}
+
+.summary-box h3 {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.income-box {
+    background: #eaf8f0;
+}
+
+.expense-box {
+    background: #fff0f0;
+}
+
+.saving-box {
+    background: #eef2ff;
+}
+
+.summary-icon {
+    font-size: 30px;
+}
+
+
+/* Progress */
+
+.progress-section {
+    margin-top: 25px;
+}
+
+.progress-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #e5e5e5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: #3157d5;
+    border-radius: 20px;
+    transition: width 0.5s;
+}
+
+
+/* Message */
+
+.message {
+    margin-top: 25px;
+    padding: 15px;
+    background: #eef2ff;
+    color: #3157d5;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Categories */
+
+.category-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+}
+
+.category-img img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 18px 18px 5px;
+}
+
+.category-card p {
+    padding: 0 18px 20px;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: #17213b;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #c8cede;
+    margin: 8px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .calculator-section,
+    .category-section {
+        padding: 60px 5%;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Available Balance */
+
+.balance-box {
+    margin-top: 20px;
+    padding: 18px;
+    background: #eef2ff;
+    border: 2px solid #3157d5;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-box span {
+    font-weight: bold;
+}
+
+.balance-box strong {
+    color: #3157d5;
+    font-size: 20px;
+}
+
+
+/* Income Status */
+
+.status-text {
+    color: #3157d5;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+
+/* Reset Button */
+
+.reset-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #eeeeee;
+    color: #333;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background: #dddddd;
+}
+
+
+/* Report History */
+
+.expense-item {
+    min-height: 60px;
+}
+
+.expense-item small {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* Better Report */
+
+#reportList {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+#reportList .expense-item {
+    margin-bottom: 10px;
+}
