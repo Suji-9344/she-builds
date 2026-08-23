@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ddd;
+    color: #333;
+}
+
+/* A4 PAGE */
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10px auto;
+    padding: 12mm;
+    background: white;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid #277da1;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    font-size: 25px;
+    color: #277da1;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+
+/* HOME */
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 0;
+}
+
+.home p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.home h2 {
+    font-size: 22px;
+    color: #277da1;
+}
+
+.button {
+    display: inline-block;
+
+    background: #277da1;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 7px 12px;
+    margin-top: 7px;
+
+    font-size: 11px;
+    border-radius: 3px;
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: #d9edf7;
+    color: #277da1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* SECTIONS */
+
+section {
+    margin-bottom: 18px;
+}
+
+.title {
+    font-size: 18px;
+    color: #277da1;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+
+
+/* ABOUT */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about p,
+.details p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 7px;
+}
+
+.skills div {
+    background: #f1f1f1;
+    padding: 8px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    border: 1px solid #ddd;
+}
+
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.project {
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    min-height: 105px;
+}
+
+.project h3 {
+    color: #277da1;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.project p {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+.project small {
+    font-size: 9px;
+    color: #555;
+}
+
+
+/* EDUCATION */
+
+.education {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* CONTACT */
+
+form {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    padding: 7px;
+
+    border: 1px solid #ccc;
+
+    font-size: 10px;
+
+    width: 25%;
+}
+
+button {
+    padding: 7px 15px;
+
+    background: #277da1;
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 20px;
+
+    border-top: 1px solid #ddd;
+
+    padding-top: 8px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 9px;
+    color: #666;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 800px) {
+
+    .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .about,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+/* PRINT A4 */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 12mm;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+}
