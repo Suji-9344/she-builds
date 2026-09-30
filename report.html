@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartSpend - Report</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        💰 SmartSpend
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="calculator.html">
+            Calculator
+        </a>
+
+        <a href="report.html">
+            Report
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<section class="calculator-section">
+
+
+    <div class="section-title">
+
+        <span>FINANCIAL REPORT</span>
+
+        <h2>📊 Your Complete Expense Report</h2>
+
+        <p>
+            Track your income, expenses and remaining balance.
+        </p>
+
+    </div>
+
+
+
+    <!-- SUMMARY -->
+
+    <div class="calculator-container">
+
+
+        <div class="summary-card">
+
+            <h2>
+                💰 Monthly Summary
+            </h2>
+
+
+            <div class="summary-box income-box">
+
+                <div>
+
+                    <small>
+                        Monthly Income
+                    </small>
+
+                    <h3 id="reportIncome">
+                        ₹0
+                    </h3>
+
+                </div>
+
+                <div class="summary-icon">
+                    💰
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-box expense-box">
+
+                <div>
+
+                    <small>
+                        Total Expense
+                    </small>
+
+                    <h3 id="reportExpense">
+                        ₹0
+                    </h3>
+
+                </div>
+
+                <div class="summary-icon">
+                    💸
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-box saving-box">
+
+                <div>
+
+                    <small>
+                        Remaining Balance
+                    </small>
+
+                    <h3 id="reportSavings">
+                        ₹0
+                    </h3>
+
+                </div>
+
+                <div class="summary-icon">
+                    🏦
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="reportMessage"
+                class="message">
+
+                No data available.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXPENSE HISTORY -->
+
+        <div class="input-card">
+
+            <h2>
+                🧾 Expense History
+            </h2>
+
+
+            <div id="reportList">
+
+                <p>
+                    No expenses added yet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<footer>
+
+    <h2>
+        💰 SmartSpend
+    </h2>
+
+    <p>
+        Personal Expense Calculator
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
